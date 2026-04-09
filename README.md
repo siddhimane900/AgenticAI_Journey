@@ -21,6 +21,29 @@ User Profile Analyzer:
 
 ## Goal
 Building strong foundation for AI & Agentic AI projects
+- Day 5 - Free AI Chatbot (Without API Key)
 
+## 📌 Project Overview
+This project is a simple rule-based AI chatbot built using Python. It simulates intelligent conversations without using any paid APIs, making it completely free and beginner-friendly.
+
+## 🎯 Objectives
+- Understand the basics of chatbot development
+- Practice Python functions and conditional statements
+- Simulate AI behavior using rule-based logic
+- Build a strong foundation for future Agentic AI projects
+
+## 🚀 Features
+- Responds to greetings like "hello" and "hi"
+- Answers questions about Python and Agentic AI
+- Provides travel-related responses (e.g., Goa)
+- Includes a help command to guide users
+- Gracefully exits the conversation using "exit" or "bye"
+- Works completely offline (no API key required)
+
+## 🛠️ Technologies Used
+- Python 3
+- Command Line Interface (CLI)
+
+## 📂 Project Structure
 ## Purpose
 To practice basic programming concepts and start building a strong foundation for AI projects.
