@@ -43,7 +43,23 @@ This project is a simple rule-based AI chatbot built using Python. It simulates 
 ## 🛠️ Technologies Used
 - Python 3
 - Command Line Interface (CLI)
+-Day 6 - Memory-Based Chatbot
 
-## 📂 Project Structure
+## 📌 Overview
+This project enhances the previous chatbot by adding memory capabilities. The chatbot can remember the user's name and favorite programming language, enabling more personalized interactions.
+
+## 🚀 Features
+- Remembers the user's name
+- Stores and recalls favorite programming language
+- Personalized greetings
+- Simple and beginner-friendly implementation
+- Works completely offline
+
+## 🛠️ Technologies Used
+- Python 3
+
+## ▶️ How to Run
+```bash
+python memory_chatbot.py
 ## Purpose
 To practice basic programming concepts and start building a strong foundation for AI projects.
