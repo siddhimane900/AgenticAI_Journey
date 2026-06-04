@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    padding:20px;
+}
+
+.login-container{
+    width:100%;
+    max-width:450px;
+}
+
+.login-box{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:40px;
+    color:white;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.login-box h1{
+    text-align:center;
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.login-box p{
+    text-align:center;
+    color:#cbd5e1;
+    margin-bottom:30px;
+}
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:500;
+}
+
+.input-group input{
+    width:100%;
+    padding:14px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    font-size:15px;
+}
+
+.input-group input:focus{
+    border:2px solid #38bdf8;
+}
+
+.options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+    font-size:14px;
+}
+
+.options a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+.options a:hover{
+    text-decoration:underline;
+}
+
+.login-btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#38bdf8;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.login-btn:hover{
+    background:#0284c7;
+}
+
+.signup-link{
+    text-align:center;
+    margin-top:20px;
+}
+
+.signup-link a{
+    color:#38bdf8;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.signup-link a:hover{
+    text-decoration:underline;
+}
+
+.back-home{
+    text-align:center;
+    margin-top:15px;
+}
+
+.back-home a{
+    color:#cbd5e1;
+    text-decoration:none;
+}
+
+.back-home a:hover{
+    color:white;
+}
+
+.show-password{
+    margin-bottom:20px;
+    font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <div class="login-box">
+
+        <h1>Admin Login</h1>
+        <p>Login to Access Admin Dashboard</p>
+
+        <form>
+
+            <div class="input-group">
+                <label>Username</label>
+                <input type="text" placeholder="Enter Username" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Enter Password" required>
+            </div>
+
+            <div class="show-password">
+                <input type="checkbox" onclick="togglePassword()">
+                Show Password
+            </div>
+
+            <div class="options">
+                <label>
+                    <input type="checkbox">
+                    Remember Me
+                </label>
+
+                <a href="#">Forgot Password?</a>
+            </div>
+
+            <a href="class-selection.html">
+    <button type="button" class="login-btn">
+        Login
+    </button>
+</a>
+
+        </form>
+
+        <div class="signup-link">
+            Don't have an account?
+            <a href="admin-signup.html">Sign Up</a>
+        </div>
+
+        <div class="back-home">
+            <a href="index.html">← Back to Home</a>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+function togglePassword() {
+
+    var password = document.getElementById("password");
+
+    if(password.type === "password"){
+        password.type = "text";
+    }
+    else{
+        password.type = "password";
+    }
+}
+
+</script>
+
+</body>
+</html>

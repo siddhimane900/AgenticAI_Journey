@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attendance Management System</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+}
+
+/* Navbar */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-size:17px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+/* Hero Section */
+
+.hero{
+    min-height:85vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:50px;
+}
+
+/* Cards */
+
+.portal-container{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.portal-card{
+    width:350px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.portal-card:hover{
+    transform:translateY(-8px);
+}
+
+.portal-card h2{
+    margin-bottom:25px;
+    font-size:30px;
+}
+
+/* Buttons */
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#38bdf8;
+    color:white;
+    padding:12px 25px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#0284c7;
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .portal-card{
+        width:100%;
+        max-width:350px;
+    }
+
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        Attendance System
+    </div>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="admin-signup.html">Admin</a>
+        </li>
+
+        <li>
+            <a href="faculty-signup.html">Faculty</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <h1>Attendance Management System</h1>
+
+    <div class="portal-container">
+
+        <!-- Admin Card -->
+
+        <div class="portal-card">
+
+            <h2>Admin Portal</h2>
+
+            <a href="admin-signup.html" class="btn">
+                Enter Admin Portal
+            </a>
+
+        </div>
+
+        <!-- Faculty Card -->
+
+        <div class="portal-card">
+
+            <h2>Faculty Portal</h2>
+
+            <a href="faculty-signup.html" class="btn">
+                Enter Faculty Portal
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

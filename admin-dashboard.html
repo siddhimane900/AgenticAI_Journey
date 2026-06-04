@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    scroll-behavior:smooth;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    width:260px;
+    height:100vh;
+    background:#0f172a;
+    position:fixed;
+    left:0;
+    top:0;
+    color:white;
+}
+
+.logo{
+    text-align:center;
+    padding:25px;
+    font-size:22px;
+    font-weight:bold;
+    color:#38bdf8;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+/* IMPORTANT FIX: make menu clickable */
+.sidebar a{
+    display:block;
+    padding:18px 25px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.sidebar a:hover{
+    background:#38bdf8;
+}
+
+/* MAIN */
+
+.main-content{
+    margin-left:260px;
+    padding:30px;
+}
+
+/* HEADER */
+
+.header h1{
+    color:#0f172a;
+    margin-bottom:25px;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.card h3{
+    color:#666;
+}
+
+.card p{
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
+    margin-top:10px;
+}
+
+/* SECTIONS */
+
+.section{
+    background:white;
+    margin-top:30px;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.section h2{
+    margin-bottom:20px;
+    color:#0f172a;
+}
+
+/* TABLE */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#38bdf8;
+    color:white;
+    padding:12px;
+    text-align:left;
+}
+
+td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+}
+
+/* BUTTONS */
+
+.btn{
+    padding:8px 15px;
+    border:none;
+    border-radius:6px;
+    color:white;
+    cursor:pointer;
+}
+
+.edit{background:#f59e0b;}
+.delete{background:#ef4444;}
+.msg{background:#2563eb;}
+.send{background:#22c55e; padding:12px 25px; font-weight:bold;}
+
+/* SEND MESSAGE */
+
+.search-box{
+    display:flex;
+    gap:10px;
+    margin-bottom:15px;
+}
+
+.search-box input{
+    flex:1;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    outline:none;
+    caret-color:#2563eb;
+}
+
+.search-box input:focus{
+    border:2px solid #38bdf8;
+}
+
+textarea{
+    width:100%;
+    height:120px;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    resize:none;
+    outline:none;
+    margin-bottom:15px;
+    caret-color:#2563eb;
+}
+
+textarea:focus{
+    border:2px solid #38bdf8;
+}
+
+/* SMOOTH SCROLL */
+html{
+    scroll-behavior:smooth;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <div class="logo">Admin Panel</div>
+
+    <!-- FIXED NAV LINKS -->
+    <a href="#dashboard">Dashboard</a>
+    <a href="#attendance">Attendance Monitoring</a>
+    <a href="#message">Send Message</a>
+    <a href="#faculty">Faculty Management</a>
+    <a href="#result">Result Section</a>
+    <a href="index.html">Logout</a>
+
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+    <!-- DASHBOARD -->
+    <div id="dashboard" class="header">
+        <h1>Admin Dashboard</h1>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Total Students</h3>
+            <p>1200</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Faculty</h3>
+            <p>50</p>
+        </div>
+
+        <div class="card">
+            <h3>Present Students</h3>
+            <p>1130</p>
+        </div>
+
+        <div class="card">
+            <h3>Absent Students</h3>
+            <p>70</p>
+        </div>
+
+    </div>
+
+    <!-- ATTENDANCE -->
+    <div id="attendance" class="section">
+
+        <h2>Attendance Monitoring</h2>
+
+        <table>
+
+            <tr>
+                <th>Roll No</th>
+                <th>Student Name</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>101</td>
+                <td>Rahul Patil</td>
+                <td>Absent</td>
+                <td><button class="btn msg">Send Message</button></td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- MESSAGE -->
+    <div id="message" class="section">
+
+        <h2>Send Message To Parent</h2>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search Student Name...">
+            <button class="btn msg">Search</button>
+        </div>
+
+        <textarea placeholder="Type message here..."></textarea>
+
+        <button class="btn send">Send Message</button>
+
+    </div>
+     <style>
+        .add-faculty-btn{
+    background:#22c55e;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.add-faculty-btn:hover{
+    background:#16a34a;
+}
+
+.btn{
+    padding:8px 15px;
+    border:none;
+    border-radius:6px;
+    color:white;
+    cursor:pointer;
+}
+
+.edit{
+    background:#f59e0b;
+}
+
+.delete{
+    background:#ef4444;
+}
+
+.section{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#38bdf8;
+    color:white;
+    padding:12px;
+    text-align:left;
+}
+
+td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+}
+
+     </style>
+    
+<!-- FACULTY -->
+<div id="faculty" class="section">
+
+    <h2>Faculty Management</h2>
+
+    <!-- Faculty Information Form -->
+
+<div style="margin-bottom:20px;">
+
+    <label><b>Faculty ID</b></label><br>
+    <input type="text" placeholder="Enter Faculty ID"
+    style="width:100%;padding:10px;margin:5px 0 15px;border:1px solid #ddd;border-radius:6px;">
+
+    <label><b>Faculty Name</b></label><br>
+    <input type="text" placeholder="Enter Faculty Name"
+    style="width:100%;padding:10px;margin:5px 0 15px;border:1px solid #ddd;border-radius:6px;">
+
+    <label><b>Email Address</b></label><br>
+    <input type="email" placeholder="Enter Email Address"
+    style="width:100%;padding:10px;margin:5px 0 15px;border:1px solid #ddd;border-radius:6px;">
+
+    <label><b>Mobile Number</b></label><br>
+    <input type="tel" placeholder="Enter Mobile Number"
+    style="width:100%;padding:10px;margin:5px 0 15px;border:1px solid #ddd;border-radius:6px;">
+
+    <label><b>Department</b></label><br>
+    <select style="width:100%;padding:10px;margin:5px 0 15px;border:1px solid #ddd;border-radius:6px;">
+        <option>Select Department</option>
+        <option>Science</option>
+        <option>Commerce</option>
+        <option>Arts</option>
+    </select>
+
+    <label><b>Subject</b></label><br>
+    <input type="text" placeholder="Enter Subject Name"
+    style="width:100%;padding:10px;margin:5px 0 15px;border:1px solid #ddd;border-radius:6px;">
+
+    <label><b>Qualification</b></label><br>
+    <input type="text" placeholder="Enter Qualification"
+    style="width:100%;padding:10px;margin:5px 0 15px;border:1px solid #ddd;border-radius:6px;">
+
+
+    
+    <button class="add-faculty-btn">
+        + Add Faculty
+    </button>
+
+</div>
+
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Dept</th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <td>F001</td>
+            <td>Dr. Sharma</td>
+            <td>Science</td>
+            <td>
+                <button class="btn edit">Edit</button>
+                <button class="btn delete">Delete</button>
+            </td>
+        </tr>
+
+    </table>
+
+</div>>
+
+    <!-- RESULT -->
+  <style>
+
+/* RESULT SECTION */
+
+.result-table-container{
+    overflow-x:auto;
+    margin-top:15px;
+}
+
+.result-table{
+    width:100%;
+    min-width:1400px;
+    border-collapse:collapse;
+    text-align:center;
+}
+
+.result-table th{
+    background:#38bdf8;
+    color:white;
+    padding:14px;
+    white-space:nowrap;
+}
+
+.result-table td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+    white-space:nowrap;
+}
+
+.result-table tr:hover{
+    background:#f8fafc;
+}
+
+.result-file{
+    width:180px;
+}
+
+.send-result-btn{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.send-result-btn:hover{
+    background:#1d4ed8;
+}
+
+</style>
+
+<!-- RESULT SECTION -->
+
+<div id="result" class="section">
+
+    <h2>Result Section</h2>
+
+    <div class="result-table-container">
+
+        <table class="result-table">
+
+            <thead>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Student Name</th>
+                    <th>Physics</th>
+                    <th>Chemistry</th>
+                    <th>Mathematics</th>
+                    <th>Biology</th>
+                    <th>Marathi</th>
+                    <th>English</th>
+                    <th>Computer Science</th>
+                    <th>Total Marks</th>
+                    <th>Result</th>
+                    <th>Upload Result</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>101</td>
+                    <td>Rahul Patil</td>
+                    <td>85</td>
+                    <td>88</td>
+                    <td>78</td>
+                    <td>81</td>
+                    <td>84</td>
+                    <td>91</td>
+                    <td>82</td>
+                    <td><strong>589</strong></td>
+                    <td>Pass</td>
+
+                    <td>
+                        <input type="file" class="result-file">
+                    </td>
+
+                    <td>
+                        <button class="send-result-btn">
+                            Send Result
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>102</td>
+                    <td>Priya Sharma</td>
+                    <td>90</td>
+                    <td>87</td>
+                    <td>89</td>
+                    <td>78</td>
+                    <td>81</td>
+                    <td>84</td>
+                    <td>85</td>
+                    <td><strong>594</strong></td>
+                    <td>Pass</td>
+
+                    <td>
+                        <input type="file" class="result-file">
+                    </td>
+
+                    <td>
+                        <button class="send-result-btn">
+                            Send Result
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>103</td>
+                    <td>Amit Kumar</td>
+                    <td>78</td>
+                    <td>81</td>
+                    <td>84</td>
+                    <td>78</td>
+                    <td>81</td>
+                    <td>84</td>
+                    <td>80</td>
+                    <td><strong>566</strong></td>
+                    <td>Pass</td>
+
+                    <td>
+                        <input type="file" class="result-file">
+                    </td>
+
+                    <td>
+                        <button class="send-result-btn">
+                            Send Result
+                        </button>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>

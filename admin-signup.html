@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Sign Up</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    padding:20px;
+}
+
+.signup-container{
+    width:100%;
+    max-width:500px;
+}
+
+.signup-box{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    color:white;
+}
+
+.signup-box h1{
+    text-align:center;
+    margin-bottom:10px;
+    color:#38bdf8;
+}
+
+.signup-box p{
+    text-align:center;
+    color:#cbd5e1;
+    margin-bottom:30px;
+}
+
+.input-group{
+    margin-bottom:18px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-size:15px;
+    font-weight:500;
+}
+
+.input-group input{
+    width:100%;
+    padding:14px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    font-size:15px;
+    background:white;
+}
+
+.input-group input:focus{
+    border:2px solid #38bdf8;
+}
+
+.signup-btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#38bdf8;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    margin-top:10px;
+}
+
+.signup-btn:hover{
+    background:#0284c7;
+}
+
+.login-link{
+    text-align:center;
+    margin-top:20px;
+    font-size:15px;
+}
+
+.login-link a{
+    color:#38bdf8;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.login-link a:hover{
+    text-decoration:underline;
+}
+
+.back-home{
+    text-align:center;
+    margin-top:15px;
+}
+
+.back-home a{
+    color:#cbd5e1;
+    text-decoration:none;
+}
+
+.back-home a:hover{
+    color:white;
+}
+</style>
+
+</head>
+<body>
+
+<div class="signup-container">
+
+    <div class="signup-box">
+
+        <h1>Admin Registration</h1>
+        <p>Create Your Admin Account</p>
+
+        <form>
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter Full Name">
+            </div>
+
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter Email Address">
+            </div>
+
+            <div class="input-group">
+                <label>Mobile Number</label>
+                <input type="tel" placeholder="Enter Mobile Number">
+            </div>
+
+            <div class="input-group">
+                <label>Username</label>
+                <input type="text" placeholder="Create Username">
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" placeholder="Create Password">
+            </div>
+
+            <div class="input-group">
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Confirm Password">
+            </div>
+
+            <button type="submit" class="signup-btn">
+                Create Account
+            </button>
+
+        </form>
+
+        <div class="login-link">
+            Already have an account?
+            <a href="admin-login.html">Login</a>
+        </div>
+
+        <div class="back-home">
+            <a href="index.html">← Back to Home</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
